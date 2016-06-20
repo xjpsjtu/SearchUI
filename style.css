@@ -1,0 +1,101 @@
+a:link { 
+color:#000000; 
+text-decoration:none; 
+} 
+a:visited { 
+color:#00FF00; 
+text-decoration:none; 
+} 
+a:hover { 
+color:#FF0000; 
+text-decoration:none; 
+} 
+a:active { 
+color:#FFFFFF; 
+text-decoration:none; 
+} 
+a{
+	font-size: 18px;
+	font-weight: bolder;
+	font-family: serif,sans-serif;
+	padding: 10px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+a.back{
+	color:#000000;
+}
+em{
+	font-size:20px;
+	font-color:#FF0000;
+}
+p{
+	padding: 10px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+body{
+	line-height: 3px;
+}
+div{
+	padding: 15px;
+}
+.Text{
+	font-size: 100px;
+}
+.main{
+	text-align: center;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);   
+}
+.InputText{
+FONT-SIZE: 20pt;
+BORDER-BOTTOM: 0px
+color: #996600;
+background-color: #6690BD;
+border: 1px solid #54697B;
+color: #FFFFFF;
+height: 35px;
+width: 600px;
+}
+.Submit{
+	height: 40px;
+width: 90px;
+float: right;
+}
+.Text2{
+	font-size: 60px;
+}
+.Text3{
+	font-size: 15px;
+}
+.InputText2{
+FONT-SIZE: 20pt;
+BORDER-BOTTOM: 0px
+color: #996600;
+background-color: #6690BD;
+border: 1px solid #54697B;
+color: #FFFFFF;
+height: 25px;
+width: 300px;
+
+}
+.Submit2{
+	height: 40px;
+width: 90px;
+}
+.high{
+	font-color:blue;
+}
+body{
+	font-color:blue;
+}
+font{
+	font-color:blue;
+}
