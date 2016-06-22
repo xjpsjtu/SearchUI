@@ -10,7 +10,18 @@
 <a href="search.html" class="back"><p class="Text2">&lt;&lt; Back</p></a>
 <div>
 <?php 
-$url = 'http://localhost:81/search/data.html';
+$page = $_GET['page'];
+if(flag==0){
+	$search_content=$_POST['search'];
+	setcookie("searchkey","$search_content");
+}else{
+	$search_content=$_COOKIE['searchkey'];
+}
+
+$search_mulkey=str_replace(" ", "+", $search_content);
+// $url = 'http://localhost:81/search/data.html';
+$url = 'http://localhost:8983/solr/collection1/select?q=' .$search_mulkey .'&rows=100&fl=url+title&wt=json&indent=true&hl=true&hl.fl=content&hl.simple.pre=%3Cem%3E&hl.simple.post=%3C%2Fem%3E
+'
 $jsonstr = file_get_contents($url);
 
 $json = json_decode($jsonstr,true);
@@ -32,7 +43,7 @@ $next_page = min($page + 1,$max_page);
 if($page > 1)$former_page=$page-1;
 else $former_page=$page;
 echo('<div class="page" >');
-echo('<a href="result.php?page=' .$former_page .'" class="page" style="float:left"><p class="Text3">&lt;&lt; Prev Page&nbsp;&nbsp;</p></a>'  .'<p style="float:left">' .$page .'</p>'   .'<a href="result.php?page=' .$next_page .'" class="page" ><p class="Text3">&nbsp;&nbsp;Next Page &gt;&gt;</p></a>');
+echo('<a href="result.php?page=' .$former_page .'flag=1'.'" class="page" style="float:left"><p class="Text3">&lt;&lt; Prev Page&nbsp;&nbsp;</p></a>'  .'<p style="float:left">' .$page .'</p>'   .'<a href="result.php?page=' .$next_page .'flag=1'.'" class="page" ><p class="Text3">&nbsp;&nbsp;Next Page &gt;&gt;</p></a>');
 echo('</div>');
 echo("<br>");
 
